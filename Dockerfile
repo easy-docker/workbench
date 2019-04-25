@@ -16,11 +16,6 @@ WORKDIR /root
 RUN apt-get install -y command-not-found bash-completion && \
     apt-get clean
 
-RUN apt-get update && \
-    apt-get dist-upgrade -y && \
-    apt-get --purge autoremove && \
-    apt-get clean
-
 VOLUME ["/data"]
 
 CMD ["/start.sh"]
