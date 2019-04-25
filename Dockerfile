@@ -7,7 +7,7 @@ RUN \
     apt-get install --no-install-recommends -y vim git curl zsh wget ca-certificates ssh screen htop python3-pip && \
     apt-get clean && \
     pip3 install pipenv && \
-    mkdir -p /data && chmod 777 /data && ln -s /data /root/data
+    mkdir -p /data && chmod 777 /data
 
 ADD start.sh /start.sh
 RUN chmod +x /start.sh
