@@ -15,7 +15,7 @@ RUN chmod +x /start.sh
 WORKDIR /root
 
 RUN sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
+RUN apt-get install -y command-not-found
 RUN apt-get update && \
     apt-get dist-upgrade -y && \
     apt-get --purge autoremove && \
