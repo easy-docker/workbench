@@ -3,6 +3,7 @@ FROM ubuntu
 LABEL maintainer="Ghostry <ghostry.green@gmail.com>"
 
 RUN apt-get update \
+    && apt dist-upgrade -y \
     && apt-get install -y vim git curl ca-certificates ssh screen \
     && apt-get clean
 
